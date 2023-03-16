@@ -1,3 +1,4 @@
+<div class="container", style="margin-top: 100px;">
 <div id="<%= dom_id product %>">
   <p>
     <strong>Name:</strong>
@@ -17,6 +18,13 @@
   <p>
     <strong>Categories:</strong>
     <%= product.categories %>
+  </p>
+
+  <p>
+  <% if product.image.attached? %>
+  <%= image_tag(product.image, style: "height: 250px; border-radius: 15px; box-shadow: 1px 1px 12px 
+  #555;")  %>
+<% end %>
   </p>
 
 </div>

@@ -5,5 +5,5 @@ class Customer < ApplicationRecord
          :recoverable, :rememberable, :validatable
     has_many :commands
     has_many :products, through: :commands
-belongs_to :cart
+has_one :cart
 end

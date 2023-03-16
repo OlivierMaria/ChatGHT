@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed&family=Roboto:wght@700&display=swap');
+
  :root{
     --color-primary: #20325f;
     --color-secondary: #5f5b8e;
@@ -20,10 +22,12 @@
     --color-light: #fff;
 }
 
+
 body {
     background: url("img/bg.jpg") repeat;
     background-color: #f2f2f2;
     background-blend-mode: overlay;
+    font-family: 'Roboto Condensed', sans-serif;
   }
 
 
@@ -39,7 +43,7 @@ body {
     margin-bottom: 20px;
   }
  /* Styling for navigation bar */
-nav {
+ nav {
     background-color: #fff;
     height: 60px;
     border-bottom: 1px solid #ccc;
@@ -64,7 +68,7 @@ nav {
     justify-content: center;
   }
   
-  nav ul {
+nav ul {
     display: flex;
     align-items: center;
     margin: 0;
@@ -73,12 +77,14 @@ nav {
     justify-content: center;
   }
   
-  nav ul li {
+ nav ul li {
     margin: 0 20px;
     justify-content: center;
   }
   
-  nav ul li a {
+
+
+nav ul li a, #btn {
     color: #444;
     text-decoration: none;
     font-size: 16px;
@@ -90,7 +96,7 @@ nav {
     justify-content: center;
   }
   
-  nav ul li a:hover {
+nav ul li a:hover {
     background-color: #ccc;
     justify-content: center;
   }
@@ -166,7 +172,8 @@ nav {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px 50px; 
+    text-align: right;
   }
   
   .product h2 {
@@ -196,3 +203,73 @@ nav {
     background-color: #444;
   }
 
+  /* Styling for Form */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  input[type="submit"] {
+    background-color: #242724;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  /* Style */
+ 
+
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }

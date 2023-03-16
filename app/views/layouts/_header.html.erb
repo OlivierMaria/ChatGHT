@@ -1,0 +1,21 @@
+<nav>
+  <div class="container">
+  </a>
+      <input type="checkbox" id="showNav">
+      <label for="showNav" id="toggleNav"><i class="fas fa-bars"></i></label>
+      <ul>
+          <li><a href="/products">Acceuil</a></li>
+          <li><a href="/products">Produits</a></li>
+          <% if customer_signed_in? %>
+          <div >
+  <%= button_to "Sign out", destroy_customer_session_path, method: :delete, id: "btn" %>
+</div>
+          <% else %>
+          
+          <li><a href="/customers/sign_up">Sign up</a></li>
+          <li><a href="/customers/sign_in">Sign in</a></li>
+          <% end %>
+      </ul>
+  </div>
+</nav>
+
