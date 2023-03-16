@@ -1,0 +1,31 @@
+<body>
+<nav>
+  <div class="container">
+  </a>
+      <input type="checkbox" id="showNav">
+      <label for="showNav" id="toggleNav"><i class="fas fa-bars"></i></label>
+      <ul>
+          <li><a href="#">Acceuil</a></li>
+          <li><a href="#">Produits</a></li>
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+  </div>
+</nav>
+
+<div class="block">
+  <h1 class="title">Nos Chatons :</h1>
+  <div class="product-grid">
+    <%# Utilisez une boucle each pour afficher chaque produit de votre collection %>
+    <% @products.each do |product| %>
+      <div class="product">
+        <h2><%= product.name %></h2>
+        <p><%= product.description %></p>
+        <p>Price: <%= number_to_currency(product.price) %></p>
+        <p>Categories: <%= product.categories %></p>
+        <%= link_to "Show this product", product_path(product), class: "btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+</body>
